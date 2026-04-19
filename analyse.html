@@ -61,6 +61,7 @@ canvas {
 <body>
 
 <h1>🎧 Music Analytics Dashboard</h1>
+<a href="index.html">Go to Home Page</a>
 
 <div class="dashboard">
 
@@ -83,16 +84,6 @@ canvas {
     <h2>📈 Year Trend</h2>
     <canvas id="yearChart"></canvas>
   </div>
-
-  <!-- <div class="card">
-    <h2>🚫 Explicit Content</h2>
-    <canvas id="explicitChart"></canvas>
-  </div>
-
-  <div class="insights">
-    <h2>🧠 Insights</h2>
-    <ul id="insightList"></ul>
-  </div> -->
 
 </div>
 
@@ -241,33 +232,6 @@ Chart.defaults.borderColor = "rgba(255,255,255,0.2)";
     }
   }
 });
-
-//   // 🚫 Explicit Chart
-//   if(data.explicit_dist){
-//     new Chart(document.getElementById("explicitChart"), {
-//       type: "pie",
-//       data: {
-//         labels: Object.keys(data.explicit_dist),
-//         datasets: [{
-//           data: Object.values(data.explicit_dist)
-//         }]
-//       }
-//     });
-//   }
-
-//   // 🧠 Insights
-//   insights.forEach((text, index) => {
-//   const li = document.createElement("li");
-//   li.textContent = text;
-//   li.style.opacity = 0;
-//   li.style.transition = "opacity 0.5s ease";
-
-//   setTimeout(() => {
-//     li.style.opacity = 1;
-//   }, index * 300);
-
-//   insightList.appendChild(li);
-// });
 
 });
 
