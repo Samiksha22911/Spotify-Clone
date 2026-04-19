@@ -1,0 +1,127 @@
+{
+    "top_songs": [
+        {
+            "song": "Die For You",
+            "artist": "The Weeknd",
+            "popularity": 95,
+            "duration_ms": 200000,
+            "position": 1,
+            "is_explicit": false,
+            "year": 2016
+        },
+        {
+            "song": "Birds of a Feather",
+            "artist": "Billie Eilish",
+            "popularity": 94,
+            "duration_ms": 225000,
+            "position": 14,
+            "is_explicit": false,
+            "year": 2024
+        },
+        {
+            "song": "We Can't Be Friends",
+            "artist": "Ariana Grande",
+            "popularity": 93,
+            "duration_ms": 215000,
+            "position": 8,
+            "is_explicit": false,
+            "year": 2024
+        },
+        {
+            "song": "Mockingbird",
+            "artist": "Eminem",
+            "popularity": 92,
+            "duration_ms": 250000,
+            "position": 5,
+            "is_explicit": true,
+            "year": 2004
+        },
+        {
+            "song": "Dandelions",
+            "artist": "Ruth B",
+            "popularity": 91,
+            "duration_ms": 230000,
+            "position": 13,
+            "is_explicit": false,
+            "year": 2017
+        },
+        {
+            "song": "Unholy",
+            "artist": "Sam Smith",
+            "popularity": 90,
+            "duration_ms": 190000,
+            "position": 2,
+            "is_explicit": true,
+            "year": 2022
+        },
+        {
+            "song": "I Like Me Better",
+            "artist": "Lauv",
+            "popularity": 90,
+            "duration_ms": 200000,
+            "position": 15,
+            "is_explicit": false,
+            "year": 2017
+        },
+        {
+            "song": "I Love You",
+            "artist": "Billie Eilish",
+            "popularity": 89,
+            "duration_ms": 195000,
+            "position": 10,
+            "is_explicit": false,
+            "year": 2019
+        },
+        {
+            "song": "Good For You",
+            "artist": "Olivia Rodrigo",
+            "popularity": 88,
+            "duration_ms": 205000,
+            "position": 4,
+            "is_explicit": false,
+            "year": 2021
+        },
+        {
+            "song": "I'm Sorry",
+            "artist": "Joyner Lucas",
+            "popularity": 87,
+            "duration_ms": 210000,
+            "position": 11,
+            "is_explicit": true,
+            "year": 2017
+        }
+    ],
+    "top_artists": {
+        "Unknown Artist": 4,
+        "Billie Eilish": 2,
+        "The Weeknd": 1,
+        "Sam Smith": 1,
+        "Justine Skye": 1,
+        "Olivia Rodrigo": 1,
+        "Eminem": 1,
+        "Ariana Grande": 1,
+        "Forest Blakk": 1,
+        "Joyner Lucas": 1
+    },
+    "pop_dist": {
+        "80-100": 12,
+        "60-80": 4,
+        "40-60": 1,
+        "0-20": 0,
+        "20-40": 0
+    },
+    "year_trend": {
+        "1981": 85.0,
+        "2004": 92.0,
+        "2014": 85.0,
+        "2015": 60.0,
+        "2016": 85.0,
+        "2017": 83.25,
+        "2018": 70.0,
+        "2019": 89.0,
+        "2020": 80.0,
+        "2021": 88.0,
+        "2022": 90.0,
+        "2024": 93.5
+    }
+}

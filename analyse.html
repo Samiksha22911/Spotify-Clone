@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Music Analytics Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+.insights {
+  grid-column: span 2;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎧 Music Analytics Dashboard</h1>
+
+<div class="dashboard">
+
+  <div class="card">
+    <h2>🎤 Top Artists</h2>
+    <canvas id="artistChart"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>🔥 Top Songs</h2>
+    <canvas id="songChart"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>📊 Popularity Distribution</h2>
+    <canvas id="popChart"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>📈 Year Trend</h2>
+    <canvas id="yearChart"></canvas>
+  </div>
+
+  <!-- <div class="card">
+    <h2>🚫 Explicit Content</h2>
+    <canvas id="explicitChart"></canvas>
+  </div>
+
+  <div class="insights">
+    <h2>🧠 Insights</h2>
+    <ul id="insightList"></ul>
+  </div> -->
+
+</div>
+
+<script>
+fetch("data.json")
+.then(res => res.json())
+.then(data => {
+
+const ctx1 = document.getElementById("artistChart").getContext("2d");
+const gradientBlue = ctx1.createLinearGradient(0, 0, 0, 400);
+gradientBlue.addColorStop(0, "#3b82f6");  // blue
+gradientBlue.addColorStop(1, "#06b6d4");  // cyan
+
+const ctx2 = document.getElementById("songChart").getContext("2d");
+const gradientPink = ctx2.createLinearGradient(0, 0, 0, 400);
+gradientPink.addColorStop(0, "#ec4899");  // pink
+gradientPink.addColorStop(1, "#8b5cf6");  // purple
+
+const ctx3 = document.getElementById("yearChart").getContext("2d");
+const gradientGreen = ctx3.createLinearGradient(0, 0, 0, 400);
+gradientGreen.addColorStop(0, "#22c55e");  // green
+gradientGreen.addColorStop(1, "#4ade80");  // light green
+
+Chart.defaults.color = "white";
+Chart.defaults.borderColor = "rgba(255,255,255,0.2)";
+
+  // 🎤 Top Artists
+  new Chart(document.getElementById("artistChart"), {
+  type: "bar",
+  data: {
+    labels: Object.keys(data.top_artists),
+    datasets: [{
+    label: "Count",
+    data: Object.values(data.top_artists),
+    backgroundColor: gradientBlue,
+    borderRadius: 8
+}]
+  },
+  options: {
+    animation: {
+      duration: 1500,
+      easing: 'easeOutQuart'
+    },
+    plugins: {
+      legend: {
+        labels: { color: "white" }
+      }
+    },
+    scales: {
+      x: {
+        ticks: { color: "white" }
+      },
+      y: {
+        ticks: { color: "white" }
+      }
+    }
+  }
+});
+
+  // 🔥 Top Songs
+  const songs = data.top_songs.map(s => s.song);
+  const pop = data.top_songs.map(s => s.popularity);
+
+  new Chart(document.getElementById("songChart"), {
+    type: "bar",
+    data: {
+      labels: songs,
+      datasets: [{
+      label: "Popularity",
+      data: pop,
+      backgroundColor: gradientPink,
+      borderRadius: 10,
+      borderWidth: 0,
+      hoverBackgroundColor: "#a855f7"
+}]
+    },
+    options: {
+  animation: {
+    duration: 1500,
+    easing: "easeOutQuart"
+  },
+  plugins: {
+    legend: {
+      labels: { color: "white" }
+    }
+  },
+  scales: {
+    x: {
+      ticks: { color: "white" }
+    },
+    y: {
+      ticks: { color: "white" }
+    }
+  }
+}
+  });
+
+  // 📊 Popularity Distribution
+  new Chart(document.getElementById("popChart"), {
+    type: "doughnut",
+    data: {
+      labels: Object.keys(data.pop_dist),
+      datasets: [{
+  data: Object.values(data.pop_dist),
+  backgroundColor: [
+    "#3b82f6",  // blue
+    "#06b6d4",  // cyan
+    "#22c55e",  // green
+    "#facc15",  // yellow
+    "#ef4444"   // red
+  ],
+  borderWidth: 0,
+  hoverOffset: 12
+}]
+    },
+    options: {
+  animation: {
+    animateScale: true,
+    duration: 1500
+  },
+  plugins: {
+    legend: {
+      labels: { color: "white" }
+    }
+  }
+}
+  });
+
+  // 📈 Year Trend
+  new Chart(document.getElementById("yearChart"), {
+  type: "line",
+  data: {
+    labels: Object.keys(data.year_trend),
+    datasets: [{
+  label: "Avg Popularity",
+  data: Object.values(data.year_trend),
+  borderColor: "#22c55e",
+  backgroundColor: gradientGreen,
+  fill: true,
+  tension: 0.4
+}]
+  },
+  options: {
+    animation: {
+      duration: 2000
+    }
+  }
+});
+
+//   // 🚫 Explicit Chart
+//   if(data.explicit_dist){
+//     new Chart(document.getElementById("explicitChart"), {
+//       type: "pie",
+//       data: {
+//         labels: Object.keys(data.explicit_dist),
+//         datasets: [{
+//           data: Object.values(data.explicit_dist)
+//         }]
+//       }
+//     });
+//   }
+
+//   // 🧠 Insights
+//   insights.forEach((text, index) => {
+//   const li = document.createElement("li");
+//   li.textContent = text;
+//   li.style.opacity = 0;
+//   li.style.transition = "opacity 0.5s ease";
+
+//   setTimeout(() => {
+//     li.style.opacity = 1;
+//   }, index * 300);
+
+//   insightList.appendChild(li);
+// });
+
+});
+
+</script>
+
+</body>
+</html>
