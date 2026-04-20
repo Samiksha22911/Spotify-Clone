@@ -46,24 +46,6 @@
             "year": 2017
         },
         {
-            "song": "Unholy",
-            "artist": "Sam Smith",
-            "popularity": 90,
-            "duration_ms": 190000,
-            "position": 2,
-            "is_explicit": true,
-            "year": 2022
-        },
-        {
-            "song": "I Like Me Better",
-            "artist": "Lauv",
-            "popularity": 90,
-            "duration_ms": 200000,
-            "position": 15,
-            "is_explicit": false,
-            "year": 2017
-        },
-        {
             "song": "I Love You",
             "artist": "Billie Eilish",
             "popularity": 89,
@@ -84,10 +66,28 @@
         {
             "song": "I'm Sorry",
             "artist": "Joyner Lucas",
-            "popularity": 87,
+            "popularity": 82,
             "duration_ms": 210000,
             "position": 11,
             "is_explicit": true,
+            "year": 2017
+        },
+        {
+            "song": "Unholy",
+            "artist": "Sam Smith",
+            "popularity": 78,
+            "duration_ms": 190000,
+            "position": 2,
+            "is_explicit": true,
+            "year": 2022
+        },
+        {
+            "song": "I Like Me Better",
+            "artist": "Lauv",
+            "popularity": 76,
+            "duration_ms": 200000,
+            "position": 15,
+            "is_explicit": false,
             "year": 2017
         }
     ],
@@ -96,32 +96,83 @@
         "Billie Eilish": 2,
         "The Weeknd": 1,
         "Sam Smith": 1,
-        "Justine Skye": 1,
-        "Olivia Rodrigo": 1,
-        "Eminem": 1,
-        "Ariana Grande": 1,
-        "Forest Blakk": 1,
-        "Joyner Lucas": 1
+        "Justine Skye": 1
     },
     "pop_dist": {
-        "80-100": 12,
+        "80-100": 8,
+        "40-60": 4,
         "60-80": 4,
-        "40-60": 1,
-        "0-20": 0,
-        "20-40": 0
+        "20-40": 1,
+        "0-20": 0
     },
-    "year_trend": {
-        "1981": 85.0,
-        "2004": 92.0,
-        "2014": 85.0,
-        "2015": 60.0,
-        "2016": 85.0,
-        "2017": 83.25,
-        "2018": 70.0,
-        "2019": 89.0,
-        "2020": 80.0,
-        "2021": 88.0,
-        "2022": 90.0,
-        "2024": 93.5
-    }
+    "year_trend": [
+        {
+            "year": 2024,
+            "popularity": 95
+        },
+        {
+            "year": 2024,
+            "popularity": 78
+        },
+        {
+            "year": 2024,
+            "popularity": 55
+        },
+        {
+            "year": 2024,
+            "popularity": 88
+        },
+        {
+            "year": 2024,
+            "popularity": 92
+        },
+        {
+            "year": 2024,
+            "popularity": 45
+        },
+        {
+            "year": 2024,
+            "popularity": 60
+        },
+        {
+            "year": 2024,
+            "popularity": 93
+        },
+        {
+            "year": 2024,
+            "popularity": 70
+        },
+        {
+            "year": 2024,
+            "popularity": 89
+        },
+        {
+            "year": 2024,
+            "popularity": 82
+        },
+        {
+            "year": 2024,
+            "popularity": 50
+        },
+        {
+            "year": 2024,
+            "popularity": 91
+        },
+        {
+            "year": 2024,
+            "popularity": 94
+        },
+        {
+            "year": 2024,
+            "popularity": 76
+        },
+        {
+            "year": 2024,
+            "popularity": 65
+        },
+        {
+            "year": 2024,
+            "popularity": 40
+        }
+    ]
 }

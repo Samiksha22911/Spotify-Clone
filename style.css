@@ -45,6 +45,11 @@ nav{
     align-items: center;
     color: aliceblue;
 }
+
+a{
+    color: black;
+}
+
 .right-half{
     display: flex;
     align-items: center;
