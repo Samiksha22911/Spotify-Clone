@@ -14,7 +14,7 @@
             "artist": "Billie Eilish",
             "popularity": 94,
             "duration_ms": 225000,
-            "position": 14,
+            "position": 11,
             "is_explicit": false,
             "year": 2024
         },
@@ -23,9 +23,18 @@
             "artist": "Ariana Grande",
             "popularity": 93,
             "duration_ms": 215000,
-            "position": 8,
+            "position": 6,
             "is_explicit": false,
             "year": 2024
+        },
+        {
+            "song": "Heat Waves",
+            "artist": "Glass Animals",
+            "popularity": 93,
+            "duration_ms": 238000,
+            "position": 14,
+            "is_explicit": false,
+            "year": 2020
         },
         {
             "song": "Mockingbird",
@@ -38,10 +47,10 @@
         },
         {
             "song": "Dandelions",
-            "artist": "Ruth B",
+            "artist": "Ruth B.",
             "popularity": 91,
             "duration_ms": 230000,
-            "position": 13,
+            "position": 10,
             "is_explicit": false,
             "year": 2017
         },
@@ -50,60 +59,51 @@
             "artist": "Billie Eilish",
             "popularity": 89,
             "duration_ms": 195000,
-            "position": 10,
+            "position": 8,
             "is_explicit": false,
             "year": 2019
         },
         {
             "song": "Good For You",
-            "artist": "Olivia Rodrigo",
+            "artist": "Selena Gomez & A$AP Rocky",
             "popularity": 88,
             "duration_ms": 205000,
             "position": 4,
             "is_explicit": false,
-            "year": 2021
+            "year": 2015
         },
         {
             "song": "I'm Sorry",
             "artist": "Joyner Lucas",
             "popularity": 82,
             "duration_ms": 210000,
-            "position": 11,
+            "position": 9,
             "is_explicit": true,
             "year": 2017
         },
         {
             "song": "Unholy",
-            "artist": "Sam Smith",
+            "artist": "Sam Smith & Kim Petras",
             "popularity": 78,
             "duration_ms": 190000,
             "position": 2,
             "is_explicit": true,
             "year": 2022
-        },
-        {
-            "song": "I Like Me Better",
-            "artist": "Lauv",
-            "popularity": 76,
-            "duration_ms": 200000,
-            "position": 15,
-            "is_explicit": false,
-            "year": 2017
         }
     ],
     "top_artists": {
-        "Unknown Artist": 4,
         "Billie Eilish": 2,
         "The Weeknd": 1,
-        "Sam Smith": 1,
-        "Justine Skye": 1
+        "Sam Smith & Kim Petras": 1,
+        "Justine Skye & Tyga": 1,
+        "Selena Gomez & A$AP Rocky": 1
     },
     "pop_dist": {
-        "80-100": 8,
-        "40-60": 4,
+        "80-100": 9,
         "60-80": 4,
-        "20-40": 1,
-        "0-20": 0
+        "40-60": 2,
+        "0-20": 0,
+        "20-40": 0
     },
     "year_trend": [
         {
@@ -128,14 +128,6 @@
         },
         {
             "year": 2024,
-            "popularity": 45
-        },
-        {
-            "year": 2024,
-            "popularity": 60
-        },
-        {
-            "year": 2024,
             "popularity": 93
         },
         {
@@ -149,10 +141,6 @@
         {
             "year": 2024,
             "popularity": 82
-        },
-        {
-            "year": 2024,
-            "popularity": 50
         },
         {
             "year": 2024,
@@ -172,7 +160,11 @@
         },
         {
             "year": 2024,
-            "popularity": 40
+            "popularity": 93
+        },
+        {
+            "year": 2024,
+            "popularity": 60
         }
     ]
 }

@@ -1,18 +1,16 @@
 song,artist,popularity,duration_ms,position,is_explicit,year
 Die For You,The Weeknd,95,200000,1,false,2016
-Unholy,Sam Smith,78,190000,2,true,2022
-Collide,Justine Skye,55,210000,3,false,2014
-Good For You,Olivia Rodrigo,88,205000,4,false,2021
+Unholy,Sam Smith & Kim Petras,78,190000,2,true,2022
+Collide,Justine Skye & Tyga,55,210000,3,false,2014
+Good For You,Selena Gomez & A$AP Rocky,88,205000,4,false,2015
 Mockingbird,Eminem,92,250000,5,true,2004
-The Fate of Ulfia,Unknown Artist,45,230000,6,false,2018
-No One No Dares,Unknown Artist,60,220000,7,false,2017
-We Can't Be Friends,Ariana Grande,93,215000,8,false,2024
-If You Love Her,Forest Blakk,70,200000,9,false,2020
-I Love You,Billie Eilish,89,195000,10,false,2019
-I'm Sorry,Joyner Lucas,82,210000,11,true,2017
-Inspiration,Unknown Artist,50,240000,12,false,2016
-Dandelions,Ruth B,91,230000,13,false,2017
-Birds of a Feather,Billie Eilish,94,225000,14,false,2024
-I Like Me Better,Lauv,76,200000,15,false,2017
-Down Under,Men at Work,65,210000,16,false,1981
-Head Dust,Unknown Artist,40,220000,17,false,2015
+We Can't Be Friends,Ariana Grande,93,215000,6,false,2024
+If You Love Her,Forest Blakk,70,200000,7,false,2020
+I Love You,Billie Eilish,89,195000,8,false,2019
+I'm Sorry,Joyner Lucas,82,210000,9,true,2017
+Dandelions,Ruth B.,91,230000,10,false,2017
+Birds of a Feather,Billie Eilish,94,225000,11,false,2024
+I Like Me Better,Lauv,76,200000,12,false,2017
+Down Under,Men at Work,65,210000,13,false,1981
+Heat Waves,Glass Animals,93,238000,14,false,2020
+No One Noticed,The Marías,60,220000,15,false,2017

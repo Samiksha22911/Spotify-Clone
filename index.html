@@ -23,7 +23,8 @@
             <div class="home-icon"><i class="fa-solid fa-house"></i></div>
              <div class="search-bar">
                 <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-                <input type="text" class = "input-box" placeholder="What do you want to play?">
+                <input type="text" id="searchInput" class="input-box" placeholder="What do you want to play?">
+                <!-- <input type="text" class = "input-box" placeholder="What do you want to play?"> -->
                 <div class="browse"><i class="fa-solid fa-window-restore"></i></div>
              </div>
         </div>
@@ -65,6 +66,9 @@
                 </div>
             </div>
             <div class="main-right-part">
+
+               <p id="noResult" style="display:none; color:white; padding:10px;">❌ Song not found</p>
+
                 <div class="music-section">
                 
                     <h2>Popular songs</h2>
@@ -129,41 +133,36 @@
                 
                     <h2>Recomended songs</h2>
                     <div class="songs">
+                    
                     <div class="music-card">
-                        <img src="images/12.jfif" alt="">
-                        <div class="music-play-btn"><i id="3" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">I LOVE YOU I'M SORRY</div>
-                        <div class="img-description">Gracie Abrams</div>
+                        <img src="images/6.jfif" alt="">
+                        <div class="music-play-btn"><i id="6" class="playMusic fa-solid fa-circle-play"></i></div>
+                        <div class="img-title">GOOD FOR YOU</div>
+                        <div class="img-description">Selene Gomez,A$AP Rocky</div>
                     </div>
                     <div class="music-card">
-                        <img src="images/13.jfif" alt="">
-                        <div class="music-play-btn"><i id="3" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">INSPIRATION</div>
-                        <div class="img-description">Unknown Brain,Aviella</div>
+                        <img src="images/7.jfif" alt="">
+                        <div class="music-play-btn"><i id="7" class="playMusic fa-solid fa-circle-play"></i></div>
+                        <div class="img-title">MOCKINGBIRD</div>
+                        <div class="img-description">Eminem</div>
                     </div>
                     <div class="music-card">
-                        <img src="images/14.jfif" alt="">
-                        <div class="music-play-btn"><i id="3" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">DANDELIONS</div>
-                        <div class="img-description">Ruth B.</div>
+                        <img src="images/8.jfif" alt="">
+                        <div class="music-play-btn"><i id="8" class="playMusic fa-solid fa-circle-play"></i></div>
+                        <div class="img-title">THE FATE OF OPHELIA</div>
+                        <div class="img-description">Taylor Swift</div>
                     </div>
-                    <div class="music-card">
-                        <img src="images/15.jfif" alt="">
-                        <div class="music-play-btn"><i id="3" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">BIRDS OF FEATHER</div>
-                        <div class="img-description">Billie Eilish</div>
+                     <div class="music-card">
+                        <img src="images/9.jfif" alt="">
+                        <div class="music-play-btn"><i id="9" class="playMusic fa-solid fa-circle-play"></i></div>
+                        <div class="img-title">NO ONE NOTICED</div>
+                        <div class="img-description">The Marias</div>
                     </div>
-                    <div class="music-card">
-                        <img src="images/16.jfif" alt="">
-                        <div class="music-play-btn"><i id="3" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">I LIVE ME BETTER</div>
-                        <div class="img-description">Lauv</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/2.jpg" alt="">
-                        <div class="music-play-btn"><i id="3" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">DOWNERS AT DUSK</div>
-                        <div class="img-description">Talha Anjum,Umair</div>
+                     <div class="music-card">
+                        <img src="images/10.jfif" alt="">
+                        <div class="music-play-btn"><i id="10" class="playMusic fa-solid fa-circle-play"></i></div>
+                        <div class="img-title">WE CAN'T BE FRIENDS</div>
+                        <div class="img-description">Ariana Grande</div>
                     </div>
                 </div>
             </div>
@@ -179,33 +178,15 @@
                     </div>
                     <div class="music-card">
                         <img src="images/4.jfif" alt="">
-                        <div class="music-play-btn"><i id="3" class="playMusic fa-solid fa-circle-play"></i></div>
+                        <div class="music-play-btn"><i id="4" class="playMusic fa-solid fa-circle-play"></i></div>
                         <div class="img-title">UNHOLY</div>
                         <div class="img-description">Sam Smith,Kim Petras</div>
                     </div>
-                     <div class="music-card">
-                        <img src="images/14.jfif" alt="">
-                        <div class="music-play-btn"><i id="3" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">DANDELIONS</div>
-                        <div class="img-description">Ruth B.</div>
-                    </div>
                     <div class="music-card">
-                        <img src="images/15.jfif" alt="">
-                        <div class="music-play-btn"><i id="3" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">BIRDS OF FEATHER</div>
-                        <div class="img-description">Billie Eilish</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/17.jfif" alt="">
-                        <div class="music-play-btn"><i id="3" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">THAT'S SO YOU</div>
-                        <div class="img-description">Gracie Abrams</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/11.jfif" alt="">
-                        <div class="music-play-btn"><i id="3" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">IF YOU LOVE HER</div>
-                        <div class="img-description">Forest Blank</div>
+                        <img src="images/5.jfif" alt="">
+                        <div class="music-play-btn"><i id="5" class="playMusic fa-solid fa-circle-play"></i></div>
+                        <div class="img-title">COLLIDE</div>
+                        <div class="img-description">Justine Skye,Tyga</div>
                     </div>
                 </div>
             </div>
@@ -219,8 +200,8 @@
    <img src="images/3.jfif" alt="">
    <div class="music-card">  
     <div>          
-   <div class="img-title-info">Title</div>
-   <div class="img-des-info">Description</div>
+   <div class="img-title-info">Song Name</div>
+   <div class="img-des-info">Artist Name</div>
     </div>
     </div>
 <div class="music-controller">
@@ -236,7 +217,6 @@
     </div>
 </div>
 </div>
-<div></div>
 
 <script src="script.js"></script>
 </body>

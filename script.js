@@ -14,16 +14,14 @@ let songs = [
 let currentSongIndex = 0;
 let audio = new Audio(songs[currentSongIndex].file);
 
-// PLAY / PAUSE BUTTON
+// PLAY / PAUSE
 playBtn.addEventListener('click', () => {
     if (audio.paused) {
         audio.play();
-        playBtn.classList.remove('fa-play');
-        playBtn.classList.add('fa-pause');
+        playBtn.classList.replace('fa-play', 'fa-pause');
     } else {
         audio.pause();
-        playBtn.classList.remove('fa-pause');
-        playBtn.classList.add('fa-play');
+        playBtn.classList.replace('fa-pause', 'fa-play');
     }
 });
 
@@ -36,11 +34,7 @@ playMusic.forEach((element) => {
         let songId = parseInt(e.target.id);
         let selectedSong = songs.find(song => song.id === songId);
 
-        // Safety check
-        if (!selectedSong) {
-            console.log("Song not found!");
-            return;
-        }
+        if (!selectedSong) return;
 
         currentSongIndex = songs.indexOf(selectedSong);
 
@@ -48,28 +42,70 @@ playMusic.forEach((element) => {
         audio.currentTime = 0;
         audio.play();
 
-        // Update play button
-        playBtn.classList.remove('fa-play');
-        playBtn.classList.add('fa-pause');
+        playBtn.classList.replace('fa-play', 'fa-pause');
 
-        // Update UI
         document.querySelector('.img-title-info').innerText = selectedSong.name;
         document.querySelector('.img-des-info').innerText = selectedSong.artist;
         document.querySelector('.player-bar img').src = selectedSong.cover;
     });
 });
 
-// PROGRESS BAR UPDATE
+// PROGRESS BAR
 audio.addEventListener('timeupdate', () => {
     if (audio.duration) {
-        let progress = (audio.currentTime / audio.duration) * 100;
-        progressBar.value = progress;
+        progressBar.value = (audio.currentTime / audio.duration) * 100;
     }
 });
 
-// SEEK FUNCTION
+// SEEK
 progressBar.addEventListener('input', () => {
     if (audio.duration) {
         audio.currentTime = (progressBar.value / 100) * audio.duration;
+    }
+});
+
+
+/* 🔍 SEARCH FUNCTIONALITY */
+/* ========================= */
+/* 🔍 SEARCH FUNCTIONALITY */
+/* ========================= */
+
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".music-card");
+const noResult = document.getElementById("noResult");
+
+searchInput.addEventListener("input", () => {
+
+    let value = searchInput.value.toLowerCase().trim();
+    let found = false;
+
+    cards.forEach((card) => {
+
+        let title = card.querySelector(".img-title").innerText.toLowerCase();
+        let artist = card.querySelector(".img-description").innerText.toLowerCase();
+
+        // ✅ If search box empty → show all
+        if (value === "") {
+            card.style.display = "block";
+            noResult.style.display = "none";
+            return;
+        }
+
+        // ✅ Match found
+        if (title.includes(value) || artist.includes(value)) {
+            card.style.display = "block";   // show
+            found = true;
+        } 
+        // ❌ No match
+        else {
+            card.style.display = "none";    // hide
+        }
+    });
+
+    // ✅ Show / Hide "Not Found"
+    if (!found && value !== "") {
+        noResult.style.display = "block";
+    } else {
+        noResult.style.display = "none";
     }
 });

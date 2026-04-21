@@ -81,7 +81,7 @@ a{
 
 <body>
 
-<h1>🎧 Music Analytics Dashboard</h1>
+<h1>Music Analytics Dashboard</h1>
 <a href="index.html"><h3>Home Page</h3></a>
 
 <div class="stats">
@@ -94,27 +94,27 @@ a{
 <div class="dashboard">
 
   <div class="card">
-    <h2>🔥 Most Played Songs</h2>
+    <h2>Most Played Songs</h2>
     <canvas id="songChart"></canvas>
   </div>
 
   <div class="card">
-    <h2>📊 Popularity Distribution</h2>
+    <h2>Popularity Distribution</h2>
     <canvas id="popChart"></canvas>
   </div>
 
   <div class="card">
-    <h2>📈 Listening Activity</h2>
+    <h2>Listening Activity</h2>
     <canvas id="activityChart"></canvas>
   </div>
 
   <div class="card">
-    <h2>📈 Year Trend</h2>
+    <h2>Year Trend</h2>
     <canvas id="yearChart"></canvas>
   </div>
 
   <div class="card">
-    <h2>🎤 Top Artists</h2>
+    <h2>Top Artists</h2>
     <div id="artistList"></div>
   </div>
 
@@ -135,7 +135,7 @@ fetch("data.json")
     return;
   }
 
-  // 🎨 GRADIENTS
+  //  GRADIENTS
   const ctx = document.getElementById("songChart").getContext("2d");
   const gradientPink = ctx.createLinearGradient(0,0,400,0);
   gradientPink.addColorStop(0, "#ec4899");
@@ -146,7 +146,7 @@ fetch("data.json")
   gradientGreen.addColorStop(0, "#22c55e");
   gradientGreen.addColorStop(1, "#4ade80");
 
-  // 📊 STATS
+  // STATS
   document.getElementById("totalSongs").textContent = data.top_songs.length;
   document.getElementById("topArtist").textContent = Object.keys(data.top_artists)[0];
 
@@ -156,7 +156,7 @@ fetch("data.json")
   document.getElementById("explicitCount").textContent =
     data.top_songs.filter(s => s.is_explicit === true).length;
 
-  // 🔥 MOST PLAYED SONGS
+  // MOST PLAYED SONGS
   new Chart(document.getElementById("songChart"), {
     type: "bar",
     data: {
@@ -173,7 +173,7 @@ fetch("data.json")
     }
   });
 
-  // 📊 DONUT
+  // DONUT
   new Chart(document.getElementById("popChart"), {
     type: "doughnut",
     data: {
@@ -186,7 +186,7 @@ fetch("data.json")
     options: { cutout: "70%" }
   });
 
-  // 📈 ACTIVITY
+  // ACTIVITY
   new Chart(document.getElementById("activityChart"), {
     type: "line",
     data: {
@@ -202,7 +202,7 @@ fetch("data.json")
     options: { plugins: { legend: { display: false } } }
   });
 
-  // 📈 YEAR TREND
+  //  YEAR TREND
   if (data.year_trend && Array.isArray(data.year_trend)) {
     new Chart(document.getElementById("yearChart"), {
       type: "line",
@@ -219,7 +219,7 @@ fetch("data.json")
     });
   }
 
-  // 🎤 TOP ARTISTS
+  //  TOP ARTISTS
   const container = document.getElementById("artistList");
   container.innerHTML = "";
 
