@@ -65,10 +65,8 @@ progressBar.addEventListener('input', () => {
 });
 
 
-/* 🔍 SEARCH FUNCTIONALITY */
-/* ========================= */
-/* 🔍 SEARCH FUNCTIONALITY */
-/* ========================= */
+
+/* SEARCH FUNCTIONALITY */
 
 const searchInput = document.getElementById("searchInput");
 const cards = document.querySelectorAll(".music-card");
@@ -84,25 +82,25 @@ searchInput.addEventListener("input", () => {
         let title = card.querySelector(".img-title").innerText.toLowerCase();
         let artist = card.querySelector(".img-description").innerText.toLowerCase();
 
-        // ✅ If search box empty → show all
+        // If search box empty → show all
         if (value === "") {
             card.style.display = "block";
             noResult.style.display = "none";
             return;
         }
 
-        // ✅ Match found
+        //  Match found
         if (title.includes(value) || artist.includes(value)) {
             card.style.display = "block";   // show
             found = true;
         } 
-        // ❌ No match
+        //  No match
         else {
             card.style.display = "none";    // hide
         }
     });
 
-    // ✅ Show / Hide "Not Found"
+    //  Show / Hide "Not Found"
     if (!found && value !== "") {
         noResult.style.display = "block";
     } else {

@@ -107,64 +107,44 @@
     },
     "year_trend": [
         {
-            "year": 2024,
-            "popularity": 95
+            "year": 1981,
+            "popularity": 65.0
+        },
+        {
+            "year": 2004,
+            "popularity": 92.0
+        },
+        {
+            "year": 2014,
+            "popularity": 55.0
+        },
+        {
+            "year": 2015,
+            "popularity": 88.0
+        },
+        {
+            "year": 2016,
+            "popularity": 95.0
+        },
+        {
+            "year": 2017,
+            "popularity": 77.25
+        },
+        {
+            "year": 2019,
+            "popularity": 89.0
+        },
+        {
+            "year": 2020,
+            "popularity": 81.5
+        },
+        {
+            "year": 2022,
+            "popularity": 78.0
         },
         {
             "year": 2024,
-            "popularity": 78
-        },
-        {
-            "year": 2024,
-            "popularity": 55
-        },
-        {
-            "year": 2024,
-            "popularity": 88
-        },
-        {
-            "year": 2024,
-            "popularity": 92
-        },
-        {
-            "year": 2024,
-            "popularity": 93
-        },
-        {
-            "year": 2024,
-            "popularity": 70
-        },
-        {
-            "year": 2024,
-            "popularity": 89
-        },
-        {
-            "year": 2024,
-            "popularity": 82
-        },
-        {
-            "year": 2024,
-            "popularity": 91
-        },
-        {
-            "year": 2024,
-            "popularity": 94
-        },
-        {
-            "year": 2024,
-            "popularity": 76
-        },
-        {
-            "year": 2024,
-            "popularity": 65
-        },
-        {
-            "year": 2024,
-            "popularity": 93
-        },
-        {
-            "year": 2024,
-            "popularity": 60
+            "popularity": 93.5
         }
     ]
 }
